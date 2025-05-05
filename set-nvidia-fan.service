@@ -1,0 +1,11 @@
+[Unit]
+Description=Set NVIDIA GPU fan speed via Xvfb
+After=multi-user.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/set-fan-xvfb.sh
+RemainAfterExit=true
+
+[Install]
+WantedBy=multi-user.target
